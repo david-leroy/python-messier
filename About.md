@@ -5,7 +5,6 @@ Yves Trang
 Baptiste Dhuicque
 
 ## 1/ les données (Messier amélioré)
-source : http://www.faaq.org/clubs/straymond/docs/messier.pdf
 
 Detail du é le furet des comètes :
 * Numero Messier : de 1 à 103
