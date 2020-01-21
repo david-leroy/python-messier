@@ -27,6 +27,6 @@ Detail du é le furet des comètes :
 ## 4/ les fonctionnalités idéales de votre outil
 ## 5/ les technologies pressenties pour réaliser le projet
 * Pyhton 
-** Flask
+* Flask
 * MySQL
 >
