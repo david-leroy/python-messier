@@ -1,8 +1,8 @@
 import flask
-from flask import request, jsonify
+from flask import request, jsonify, render_template
 import sqlite3
 
-app = flask.Flask(__name__)
+app = flask.Flask(__name__, template_folder='templates')
 app.config["DEBUG"] = True
 
 def dict_factory(cursor, row):
@@ -13,8 +13,7 @@ def dict_factory(cursor, row):
 
 @app.route('/', methods=['GET'])
 def home():
-    return '''<h1>Distant Reading Archive</h1>
-<p>A prototype API for distant reading of Music Albums and Playlists.</p>'''
+    return render_template('index.html')
 
 #Get all messier
 @app.route('/api/v1/resources/messier/all', methods=['GET'])
