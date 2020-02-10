@@ -46,7 +46,16 @@ Le Catalogue de Messier est le premier catalogue des objets extragalactiques, il
 * [SQLite] - Base de données relationnelle (très légère)
 * [HEROKU] - Utilisé pour déployé le code en serverless et hébergement du front
 
-### GET /objects
+## Request & Response Examples
+
+### API Resources
+
+  - [GET /api/v1/objects](#get-objects)
+  - [GET /api/v1/objects/{id}](#get-objectsid)
+  - [GET /api/v1/objects/{id}/{parameter}](#get-objectsidparameter)
+  - [POST /api/v1](#post-objects)
+  
+ ### GET /objects
 
 Example: http://example.gov/api/v1/objects.json
 
@@ -173,17 +182,5 @@ Response body:
 - Recoupement avec d'autres sources
 - Entièrement en Python
 - Hébergé sur un service en ligne
-
-
-
-
-## Request & Response Examples
-
-### API Resources
-
-  - [GET /api/v1/objects](#get-objects)
-  - [GET /api/v1/objects/{id}](#get-objectsid)
-  - [GET /api/v1/objects/{id}/{parameter}](#get-objectsidparameter)
-  - [POST /api/v1](#post-objects)
 
 
