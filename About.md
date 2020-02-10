@@ -173,14 +173,3 @@ Response body:
  - Mettre en place un FrontEnd ludique et interactif
 
 
-
-## Contraintes d'accessibilité :
-
-- Performance
-- Flexibilité et facilité de recherche/exploitation
-- Complétude des données
-- Recoupement avec d'autres sources
-- Entièrement en Python
-- Hébergé sur un service en ligne
-
-
