@@ -50,14 +50,61 @@ Le Catalogue de Messier est le premier catalogue des objets extragalactiques, il
 
 ### API Resources
 
-  - [GET api/v1/resources/messier?N_messier=all](#get-objects)
+  - [GET api/v1/resources/messier?all](#get-objects)
   - [GET api/v1/resources/messier?N_messier={id}](#get-objectsid)
   - [GET /api/v1/objects/{id}/{parameter}](#get-objectsidparameter)
   - [POST /api/v1](#post-objects)
   
  ### GET /objects
 
-Example: http://example.gov/api/v1/resources/messier?N_messier=M1
+Example: http://example.gov/api/v1/resources/messier/all
+
+Response body:
+```
+{
+    "Constellation": "Com", 
+    "Constellation_EN": "Hair of Berenice", 
+    "Constellation_FR": "Chevelure de B\u00e9r\u00e9nice", 
+    "Constellation_Latin": "Coma Berenices", 
+    "Dec (Declinaison)": "+18:11:29.4", 
+    "Discoverer": "M\u00e9chain", 
+    "Distance (l.y / a. l.)": "41000000", 
+    "Image": "http://www.lasam.ca/messier/M085.JPG", 
+    "Magnitude": "9", 
+    "Messier": "M85", 
+    "NGC": "NGC 4382", 
+    "Object type / Type d'objet": "Galaxy / Galaxie", 
+    "RA (Right Ascension)": "12:25:24.11", 
+    "Season / Saison": "Spring / Printemps", 
+    "Size / Dimensions": "7,1' x 5,2'", 
+    "URL de l'image": "https://www.datastro.eu/api/v2/catalog/datasets/catalogue-de-messier/files/6f5ba5b373b9d98409c648eccca69991", 
+    "Year": "1781"
+  }, 
+  ...
+  {
+    "Constellation": "CVn", 
+    "Constellation_EN": "Hound Dogs", 
+    "Constellation_FR": "Les\u00a0Chiens de chasse", 
+    "Constellation_Latin": "Canes Venatici", 
+    "Dec (Declinaison)": "+42:01:45.4", 
+    "Discoverer": "M\u00e9chain", 
+    "Distance (l.y / a. l.)": "23800000", 
+    "Image": "http://www.lasam.ca/messier/M063.JPG", 
+    "Magnitude": "8", 
+    "Messier": "M63", 
+    "NGC": "NGC 5055", 
+    "Object type / Type d'objet": "Galaxy / Galaxie", 
+    "RA (Right Ascension)": "13:15:49.33", 
+    "Season / Saison": "Spring / Printemps", 
+    "Size / Dimensions": "12,0' x 7,6'", 
+    "URL de l'image": "https://www.datastro.eu/api/v2/catalog/datasets/catalogue-de-messier/files/6cc3be477870d7c2a23c13181ba4ce0c", 
+    "Year": "1779"
+  }
+```
+
+### GET /objects/{id}
+
+Example: http://example.gov/api/v1/objects/1.json
 
 Response body:
 ```
@@ -82,34 +129,6 @@ Response body:
     "Year": "1731"
   }
 ]
-```
-
-### GET /objects/{id}
-
-Example: http://example.gov/api/v1/objects/1.json
-
-Response body:
-```
-{
-    "result": {
-        "id": "1",
-        "messier_number": "M1",
-        "name": "Crab Nebula",
-        "ngc": "NGC 1952",
-        "constellation": "Taurus",
-        "type": "Supernova remnant",
-        "dimension": "6'×4'",
-        "distance": {
-            "value": "6.3",
-            "unit": "kly"
-        },
-        "magnitude": "8.4",
-        "ascension": "05h 34m 31.94s",
-        "discovery_date": "03/05/1731",
-        "discoverer": "John Bevis",
-        "image_link": "https://en.wikipedia.org/wiki/Messier_object#/media/File:Crab_Nebula.jpg"
-    }
-}
 ```
 
 ### GET /objects/{id}/{parameter}
