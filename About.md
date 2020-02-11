@@ -50,14 +50,13 @@ Le Catalogue de Messier est le premier catalogue des objets extragalactiques, il
 
 ### API Resources
 
-  - [GET api/v1/resources/messier?all](#get-objects)
-  - [GET api/v1/resources/messier?N_messier={id}](#get-objectsid)
-  - [GET /api/v1/objects/{id}/{parameter}](#get-objectsidparameter)
-  - [POST /api/v1](#post-objects)
+  - [GET /api/v1/resources/messier?all](#get-objects)
+  - [GET /api/v1/resources/messier?N_messier={id}](#get-objectsid)
+  - [GET /api/v1/resources/messier?magnitude={id}&constellation_FR={id}&Year={id}](#get-objectsidparameter)
   
  ### GET /objects
 
-Example: http://example.gov/api/v1/resources/messier/all
+Example: https://messier-123.herokuapp.com/api/v1/resources:all
 
 Response body:
 ```
@@ -104,7 +103,7 @@ Response body:
 
 ### GET /objects/{id}
 
-Example: http://example.gov/api/v1/objects/1.json
+Example: https://messier-123.herokuapp.com/api/v1/resources/messier?N_messier=1
 
 Response body:
 ```
@@ -130,19 +129,34 @@ Response body:
   }
 ]
 ```
-
-### GET /objects/{id}/{parameter}
-
-Example: http://example.gov/api/v1/objects/1/name.json
+### GET /objects/{parameter}
+Example: http://messier-123.herokuapp.com/api/v1/resources/messier?magnitude=3&constellation_FR=Cancer
 
 Response body:
 ```
-{
-    "result": {
-        "name": "Crab Nebula"
-    }
-}
+[
+  {
+    "Constellation": "Cnc", 
+    "Constellation_EN": "Crab", 
+    "Constellation_FR": "Cancer", 
+    "Constellation_Latin": "Cancer", 
+    "Dec (Declinaison)": "+19:40:19.4", 
+    "Discoverer": "", 
+    "Distance (l.y / a. l.)": "520", 
+    "Image": "http://www.lasam.ca/messier/M044.JPG", 
+    "Magnitude": "3", 
+    "Messier": "M44", 
+    "NGC": "NGC 2632", 
+    "Object type / Type d'objet": "Open Cluster / Amas Ouvert", 
+    "RA (Right Ascension)": "08:40:22.20", 
+    "Season / Saison": "Spring / Printemps", 
+    "Size / Dimensions": "70,0'", 
+    "URL de l'image": "https://www.datastro.eu/api/v2/catalog/datasets/catalogue-de-messier/files/d4caf3578fb228161b3065e9d37cc2b2", 
+    "Year": ""
+  }
+]
 ```
+
 
 
 ### Status Codes
