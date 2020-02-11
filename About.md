@@ -164,26 +164,10 @@ Response body:
 | Status Code | Description |
 | :--- | :--- |
 | 200 | `OK` |
-| 201 | `CREATED` |
 | 400 | `BAD REQUEST` |
 | 404 | `NOT FOUND` |
 | 500 | `INTERNAL SERVER ERROR` |
 
-## Liens annexes de données
-* [HyperLeda](http://leda.univ-lyon1.fr/)
-* [CDS Portal](http://cdsportal.u-strasbg.fr/)
 
-### Installation
-
-> __TODO :__ Compléter les instructions d'installation et de déploiement
-
-### Todos
-
- - Compléter le fichier about.md
- - Documenter les routes utilisées
- - Initialiser Django Rest Framework
- - Mettre en place l'infrastructure Azure
- - Développer les Az function requises
- - Mettre en place un FrontEnd ludique et interactif
 
 
