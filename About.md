@@ -50,57 +50,38 @@ Le Catalogue de Messier est le premier catalogue des objets extragalactiques, il
 
 ### API Resources
 
-  - [GET /api/v1/objects](#get-objects)
-  - [GET /api/v1/objects/{id}](#get-objectsid)
+  - [GET api/v1/resources/messier?N_messier=all](#get-objects)
+  - [GET api/v1/resources/messier?N_messier={id}](#get-objectsid)
   - [GET /api/v1/objects/{id}/{parameter}](#get-objectsidparameter)
   - [POST /api/v1](#post-objects)
   
  ### GET /objects
 
-Example: http://example.gov/api/v1/objects.json
+Example: http://example.gov/api/v1/resources/messier?N_messier=M1
 
 Response body:
 ```
-{
-    "results": [
-        {
-            "id": "1",
-            "messier_number": "M1",
-            "name": "Crab Nebula",
-            "ngc": "NGC 1952",
-            "constellation": "Taurus",
-            "type": "Supernova remnant",
-            "dimension": "6'×4'",
-            "distance": {
-                "value": "6.3",
-                "unit": "kly"
-            },
-            "magnitude": "8.4",
-            "ascension": "05h 34m 31.94s",
-            "discovery_date": "03/05/1731",
-            "discoverer": "John Bevis",
-            "image_link": "https://en.wikipedia.org/wiki/Messier_object#/media/File:Crab_Nebula.jpg"
-        },
-        {
-            "id": "2",
-            "messier_number": "M2",
-            "name": None,
-            "ngc": "NGC 7089",
-            "constellation": "Aquarius",
-            "type": "Globular cluster",
-            "dimension": "16′.0",
-            "distance": {
-                "value": "33",
-                "unit": "kly"
-            },
-            "magnitude": "6.3",
-            "ascension": "21h 33m 27.02s",
-            "discovery_date": "03/05/1731",
-            "discoverer": "John Bevis",
-            "image_link": "https://en.wikipedia.org/wiki/Messier_object#/media/File:Messier_2_Hubble_WikiSky.jpg"
-        },
-    ]
-}
+[
+  {
+    "Constellation": "Tau", 
+    "Constellation_EN": "Bull", 
+    "Constellation_FR": "Taureau", 
+    "Constellation_Latin": "Taurus", 
+    "Dec (Declinaison)": "+22:00:52.1", 
+    "Discoverer": "B\u00e9vis", 
+    "Distance (l.y / a. l.)": "6500", 
+    "Image": "http://www.lasam.ca/messier/M001.JPG", 
+    "Magnitude": "8", 
+    "Messier": "M1", 
+    "NGC": "NGC 1952", 
+    "Object type / Type d'objet": "Supernova remnant / Reste de Supernova", 
+    "RA (Right Ascension)": "05:34:31.97", 
+    "Season / Saison": "Winter / Hiver", 
+    "Size / Dimensions": "6,0' x 4,0'", 
+    "URL de l'image": "https://www.datastro.eu/api/v2/catalog/datasets/catalogue-de-messier/files/9e2732e960c78804a2ee3fa059c69231", 
+    "Year": "1731"
+  }
+]
 ```
 
 ### GET /objects/{id}
