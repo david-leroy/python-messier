@@ -56,7 +56,7 @@ Le Catalogue de Messier est le premier catalogue des objets extragalactiques, il
   
  ### GET /objects
 
-Example: https://messier-123.herokuapp.com/api/v1/resources:all
+Example: https://messier-123.herokuapp.com/api/v1/resources/messier/all
 
 Response body:
 ```
@@ -103,7 +103,7 @@ Response body:
 
 ### GET /objects/{id}
 
-Example: https://messier-123.herokuapp.com/api/v1/resources/messier?N_messier=1
+Example: https://messier-123.herokuapp.com/api/v1/resources/messier?N_messier=M1
 
 Response body:
 ```
